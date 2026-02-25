@@ -1718,6 +1718,40 @@ input[type="date"].form-input {
     color: #111;
 }
 
+/* Form elements em fundo branco (jantar.html) */
+.socios .aniversario-section-label {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.socios .aniversario-participants-hint {
+    color: #888;
+}
+
+.socios .participante-remove-btn {
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    color: #888;
+}
+
+.socios .participante-remove-btn:hover {
+    background: rgba(231, 76, 60, 0.06);
+    color: #e74c3c;
+    border-color: rgba(231, 76, 60, 0.35);
+}
+
+.socios .aniversario-summary {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.socios .aniversario-summary-row {
+    color: #555;
+}
+
+.socios .aniversario-summary-row.total {
+    color: #111;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .aniversario-banner {
     display: flex;
     justify-content: center;
