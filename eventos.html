@@ -91,6 +91,83 @@
 
     <!-- Events Gallery -->
     <main id="main-content">
+
+        <!-- Jantar de Aniversário 2026 — Inscrições -->
+        <section class="section aniversario-inscricao" id="inscricao-aniversario" aria-labelledby="aniversario-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="aniversario-title">Jantar de Aniversário 2026</h2>
+                    <p class="section-subtitle">Celebra connosco mais um ano de história do NAF Vale do Sousa</p>
+                </div>
+
+                <!-- Event Info Banner -->
+                <div class="aniversario-banner">
+                    <div class="aniversario-info-item">
+                        <span class="aniversario-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28"
+                                height="28">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="aniversario-info-label">Data</span>
+                            <span class="aniversario-info-value">24 de Abril de 2026</span>
+                        </div>
+                    </div>
+                    <div class="aniversario-info-item">
+                        <span class="aniversario-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28"
+                                height="28">
+                                <line x1="12" y1="1" x2="12" y2="23" />
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="aniversario-info-label">Preço por pessoa</span>
+                            <span class="aniversario-info-value">30 €</span>
+                        </div>
+                    </div>
+                    <div class="aniversario-info-item">
+                        <span class="aniversario-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28"
+                                height="28">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="aniversario-info-label">Faltam</span>
+                            <span class="aniversario-info-value" id="countdownValue">-- dias</span>
+                        </div>
+                    </div>
+                    <div class="aniversario-info-item">
+                        <span class="aniversario-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28"
+                                height="28">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="aniversario-info-label">Local</span>
+                            <span class="aniversario-info-value">Quinta de Luson</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div style="text-align: center; margin-top: var(--spacing-2xl);">
+                    <a href="jantar.html" class="cta-button primary"
+                        style="font-size:1.1rem; padding: 1rem 3rem;">Inscreve-te</a>
+                </div>
+            </div>
+        </section>
+
+
         <section class="section events-gallery" aria-labelledby="gallery-title">
             <div class="container">
                 <div class="event-cards-grid">
@@ -310,6 +387,15 @@
 
     <script src="script.js" defer></script>
     <script src="eventos.js" defer></script>
+    <script>
+        // Countdown para o Jantar de Aniversário 2026
+        (function () {
+            var target = new Date('2026-04-24T00:00:00');
+            var days = Math.floor((target - new Date()) / 86400000);
+            var el = document.getElementById('countdownValue');
+            if (el) el.textContent = days > 0 ? days + ' dias' : 'Hoje!';
+        })();
+    </script>
 </body>
 
 </html>

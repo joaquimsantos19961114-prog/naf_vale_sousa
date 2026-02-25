@@ -1691,3 +1691,189 @@ input[type="date"].form-input {
 .resource-type {
     display: none;
 }
+
+/* ===================================
+   Jantar Aniversário — Inscrição
+   =================================== */
+.aniversario-inscricao {
+    background-color: var(--color-black);
+}
+
+.aniversario-inscricao .section-title,
+.aniversario-inscricao .section-subtitle {
+    color: var(--color-white);
+}
+
+/* Banner em contexto de fundo branco (jantar.html) */
+.socios .aniversario-banner {
+    background: #f4f4f4;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.socios .aniversario-info-label {
+    color: #666;
+}
+
+.socios .aniversario-info-value {
+    color: #111;
+}
+
+.aniversario-banner {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-3xl);
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius-lg);
+}
+
+.aniversario-info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.aniversario-info-icon {
+    color: var(--color-accent-green);
+    flex-shrink: 0;
+}
+
+.aniversario-info-label {
+    display: block;
+    color: var(--color-light-gray);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+}
+
+.aniversario-info-value {
+    display: block;
+    color: var(--color-white);
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.aniversario-section-label {
+    color: var(--color-accent-green);
+    font-weight: var(--font-weight-semibold);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.aniversario-participants-hint {
+    color: var(--color-light-gray);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Participant rows */
+.participante-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.participante-num {
+    color: var(--color-accent-green);
+    font-weight: var(--font-weight-bold);
+    min-width: 1.5rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.participante-item .form-input {
+    flex: 1;
+    margin: 0;
+}
+
+.participante-remove-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--color-light-gray);
+    border-radius: var(--border-radius-sm);
+    padding: 8px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.participante-remove-btn:hover {
+    background: rgba(231, 76, 60, 0.12);
+    color: #e74c3c;
+    border-color: rgba(231, 76, 60, 0.4);
+}
+
+/* Add participant button */
+.aniversario-add-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: transparent;
+    color: var(--color-accent-green);
+    border: 1px dashed var(--color-accent-green);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-family: var(--font-family);
+    transition: var(--transition-fast);
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.85;
+}
+
+.aniversario-add-btn:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Summary */
+.aniversario-summary {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.aniversario-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) 0;
+    color: var(--color-light-gray);
+    font-size: 0.95rem;
+}
+
+.aniversario-summary-row.total {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: var(--spacing-xs);
+    padding-top: var(--spacing-sm);
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+.aniversario-summary-row.total strong {
+    color: var(--color-accent-green);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    .aniversario-banner {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+    }
+}
