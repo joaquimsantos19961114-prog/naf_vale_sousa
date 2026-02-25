@@ -1685,3 +1685,9 @@ input[type="date"].form-input {
         min-width: 260px;
     }
 }
+
+/* Ocultar tamanho e tipo de ficheiro nos recursos */
+.resource-size,
+.resource-type {
+    display: none;
+}
