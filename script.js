@@ -198,20 +198,38 @@ document.addEventListener('DOMContentLoaded', function () {
                     }, 5000);
                 });
             } else {
-                // Formulário de contacto (index.html) — simulado
-                setTimeout(() => {
+                // Formulário de contacto (index.html) — enviar via EmailJS
+                emailjs.send('service_js_naf', 'template_contacto', {
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone || '—',
+                    message: formData.message
+                }).then(function () {
                     showFormMessage('Mensagem enviada com sucesso! Entraremos em contacto em breve.', 'success');
                     contactForm.reset();
                     submitButton.disabled = false;
                     submitButton.textContent = originalText;
-                    console.log('Form submitted:', formData);
-                }, 1500);
+                    setTimeout(() => {
+                        const msg = document.getElementById('formFeedback');
+                        if (msg) msg.style.display = 'none';
+                    }, 5000);
+                }, function (error) {
+                    showFormMessage('Erro ao enviar a mensagem. Por favor tente novamente.', 'error');
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                    console.error('EmailJS error:', error);
+                    setTimeout(() => {
+                        const msg = document.getElementById('formFeedback');
+                        if (msg) msg.style.display = 'none';
+                    }, 5000);
+                });
             }
         });
     }
 
     function showFormMessage(message, type) {
-        const messageElement = document.getElementById('formMessage');
+        // index.html usa id="formFeedback"; socio.html usa id="formMessage"
+        const messageElement = document.getElementById('formFeedback') || document.getElementById('formMessage');
         if (!messageElement) return;
         messageElement.textContent = message;
         messageElement.className = `form-message ${type}`;
