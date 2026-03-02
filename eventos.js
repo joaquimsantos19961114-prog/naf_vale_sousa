@@ -427,7 +427,7 @@
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1770377654/P1010752_fu8fpn.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770377654/P1010763_ux3trp.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770377654/P1010748_sgytnk.jpg'
     ];
 
-const aniversario2024Photos = [
+    const aniversario2024Photos = [
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381035/R5AT2189_rse0ax.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381035/R5AT2191_y1pszr.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381034/R5AT2177_comcv5.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381034/R5AT2186_rip2qq.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381034/R5AT2182_sk9kv7.webp',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381034/R5AT2179_mtyv6b.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381033/R5AT2166_irkl3z.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381033/R5AT2173_xyl8n0.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381033/R5AT2164_pgzzxe.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381033/R5AT2160_vvomke.webp',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381033/R5AT2161_wrspfs.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381033/R5AT2157_wz26le.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381008/R5AT2155_dmbzqc.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381008/R5AT2153_d942le.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770381007/R5AT2151_ducl5s.webp',
@@ -504,7 +504,7 @@ const aniversario2024Photos = [
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1770380637/4.1_bdfwdh.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770380637/3_ptstkb.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770380637/4.4_z1vnb2.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770380637/1_bqmblu.webp', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770380637/4.3_sycccy.webp'
     ];
 
-const padel2024Photos = [
+    const padel2024Photos = [
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783238/IMG_6075_vyzxwh.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783237/IMG_5934_d3fwfy.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783232/IMG_7573_jvss7l.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783231/IMG_7571_kotr1l.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783230/IMG_6321_yxunso.jpg',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783226/IMG_5756_d85eec.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783224/IMG_7873_clouw2.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783221/IMG_7970_jkl5q3.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783219/IMG_7647_o3db3m.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783215/IMG_7525_s0a61s.jpg',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783214/IMG_6018_rgq7m4.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783212/IMG_7934_jceac9.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783208/IMG_7890_rgbssc.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783207/IMG_7860_exp8ew.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769783202/IMG_7824_kpiofo.jpg',
@@ -574,7 +574,7 @@ const padel2024Photos = [
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782538/IMG_5775_lg0uzm.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782537/IMG_7213_z0m6fr.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782536/IMG_6076_zqakgi.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782534/IMG_5856_pzkgcl.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782533/IMG_5800_gpxazi.jpg'
     ];
 
-const tacaCarlosCarvalhoPhotos = [
+    const tacaCarlosCarvalhoPhotos = [
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782341/IMG_0603_eh0lz9.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782340/IMG_0616_d2f0hc.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782339/IMG_0613_gzxkuc.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782338/IMG_0645_pukw28.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782336/IMG_0604_jja7de.jpg',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782334/IMG_0609_pj4ian.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782333/IMG_0606_kb4een.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782332/IMG_0553_xxsifn.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782330/IMG_0599_zym0vj.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782328/IMG_0598_fig8dq.jpg',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782327/IMG_0601_xzpim9.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782326/IMG_0593_i8rpzb.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782324/IMG_0592_vt7ifh.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782323/IMG_0591_vfiwvw.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782321/IMG_0559_bsyp8d.jpg',
@@ -582,7 +582,7 @@ const tacaCarlosCarvalhoPhotos = [
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782315/IMG_0632_elbrfa.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782312/IMG_0552_tjhfk2.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782311/IMG_0580_cw3iog.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769782311/IMG_0573_geinpu.jpg'
     ];
 
-const tomadaPosse2024Photos = [
+    const tomadaPosse2024Photos = [
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780702/IMG_0543_aq491i.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780701/IMG_0545_k1dgur.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780698/IMG_0544_z3cqfp.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780696/IMG_0419_k3poln.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780695/IMG_0354_qhfsqm.jpg',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780692/IMG_0425_rnorm4.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780691/IMG_0373_awhirk.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780688/IMG_0415_eudigi.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780686/IMG_0385_rptzcp.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780685/IMG_0539_nidrly.jpg',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780681/IMG_0432_p3f96j.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780680/IMG_0412_bonoqh.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780680/IMG_0391_ayewfj.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780676/IMG_0388_ibnvwb.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780675/IMG_0349_mfl60k.jpg',
@@ -632,7 +632,7 @@ const tomadaPosse2024Photos = [
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780298/421984111_807270731442468_9060365242798674421_n_jjyg69.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780296/424952818_807270721442469_3588893514165036205_n_hee4hk.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780296/424672827_807270831442458_2355507925324251382_n_m9tcca.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1769780295/421995677_807270951442446_7605291562977742475_n_bbawhw.jpg'
     ];
 
-const tomadaPosse2026Photos = [
+    const tomadaPosse2026Photos = [
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809240/IMG_0435_bejl3i.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809239/IMG_0434_efog5m.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809239/IMG_0433_dro5va.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809239/IMG_0432_lmqveh.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809239/IMG_0430_fjf1qo.jpg',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809238/IMG_0431_xl7kf1.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809238/IMG_0427_xxsmov.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809238/IMG_0426_nsq68g.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809237/IMG_0424_efozyd.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809237/IMG_0425_uxidqu.jpg',
         'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809237/IMG_0423_eazumq.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809237/IMG_0422_s1hyhn.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809237/IMG_0419_dkpiqx.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809236/IMG_0420_zmzcdd.jpg', 'https://res.cloudinary.com/de0ffazcl/image/upload/v1770809236/IMG_0418_wmnqkx.jpg',
@@ -687,15 +687,35 @@ const tomadaPosse2026Photos = [
     const lightboxNext = document.getElementById('lightboxNext');
     const lightboxDownload = document.getElementById('lightboxDownload');
 
+    // Gallery Modal elements
+    const galleryModal = document.getElementById('galleryModal');
+    const galleryModalGrid = document.getElementById('galleryModalGrid');
+    const galleryModalTitle = document.getElementById('galleryModalTitle');
+    const galleryModalCount = document.getElementById('galleryModalCount');
+    const galleryModalClose = document.getElementById('galleryModalClose');
+
+    // Map event id → human-readable title
+    const eventTitles = {
+        aniversario2025: 'Aniversário 2025',
+        aniversario2024: 'Aniversário 2024',
+        padel2025: 'Torneio de Padel 2025',
+        padel2024: 'Torneio de Padel 2024',
+        convivio2024: 'Convívio 2024',
+        caminhada2024: 'Caminhada Solidária',
+        taca2024: 'Taça Carlos Carvalho 2024',
+        tomada2024: 'Tomada de Posse 2024',
+        tomada2026: 'Tomada de Posse 2026'
+    };
+
     // Event card click handler
     function initializeEventCards() {
         const eventCards = document.querySelectorAll('.event-card');
 
         eventCards.forEach(card => {
-            // Mouse click
+            // Mouse click → open gallery modal first
             card.addEventListener('click', function () {
                 const eventId = this.getAttribute('data-event');
-                openLightbox(eventId, 0);
+                openGalleryModal(eventId);
             });
 
             // Keyboard support
@@ -703,47 +723,139 @@ const tomadaPosse2026Photos = [
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
                     const eventId = this.getAttribute('data-event');
-                    openLightbox(eventId, 0);
+                    openGalleryModal(eventId);
                 }
             });
         });
     }
 
-    // Open lightbox
+    // Helper: get the photos array for a given event id
+    function getPhotosForEvent(eventId) {
+        if (eventId === 'aniversario2025') return aniversario2025Photos;
+        if (eventId === 'aniversario2024') return aniversario2024Photos;
+        if (eventId === 'padel2025') return padel2025Photos;
+        if (eventId === 'padel2024') return padel2024Photos;
+        if (eventId === 'convivio2024') return convivio2024Photos;
+        if (eventId === 'caminhada2024') return caminhada2024Photos;
+        if (eventId === 'taca2024') return tacaCarlosCarvalhoPhotos;
+        if (eventId === 'tomada2024') return tomadaPosse2024Photos;
+        if (eventId === 'tomada2026') return tomadaPosse2026Photos;
+        return [];
+    }
+
+    // =============================================
+    // Gallery Modal — intermediate photo grid
+    // =============================================
+    function openGalleryModal(eventId) {
+        const photos = getPhotosForEvent(eventId);
+        if (!photos.length || !galleryModal) return;
+
+        // Set header info
+        galleryModalTitle.textContent = eventTitles[eventId] || eventId;
+        galleryModalCount.textContent = photos.length + ' fotos';
+
+        // Clear previous thumbnails
+        galleryModalGrid.innerHTML = '';
+
+        // Build thumbnail items using an IntersectionObserver for lazy loading
+        const observer = new IntersectionObserver(function (entries, obs) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    obs.unobserve(img);
+                }
+            });
+        }, { rootMargin: '200px' });
+
+        photos.forEach(function (url, index) {
+            const item = document.createElement('div');
+            item.className = 'gallery-modal-item';
+            item.setAttribute('role', 'button');
+            item.setAttribute('tabindex', '0');
+            item.setAttribute('aria-label', 'Ver foto ' + (index + 1));
+
+            const img = document.createElement('img');
+            // Use Cloudinary scaling (keeps natural aspect ratio, no crop)
+            const thumbUrl = url.replace('/upload/', '/upload/c_scale,w_600,q_auto,f_auto/');
+            img.dataset.src = thumbUrl; // lazy
+            img.alt = 'Foto ' + (index + 1);
+            img.className = 'gallery-modal-thumb';
+            img.loading = 'lazy';
+            observer.observe(img);
+
+            // When image loads, set flex-grow = aspect ratio for justified layout
+            img.addEventListener('load', function () {
+                const ratio = this.naturalWidth / this.naturalHeight;
+                if (ratio && ratio > 0) {
+                    item.style.flexGrow = ratio;
+                    item.style.flexBasis = (220 * ratio) + 'px';
+                }
+            });
+
+            item.appendChild(img);
+
+            item.addEventListener('click', function () {
+                closeGalleryModal();
+                openLightbox(eventId, index);
+            });
+            item.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    closeGalleryModal();
+                    openLightbox(eventId, index);
+                }
+            });
+
+            galleryModalGrid.appendChild(item);
+        });
+
+        galleryModal.classList.add('active');
+        galleryModalGrid.scrollTop = 0;
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeGalleryModal() {
+        if (!galleryModal) return;
+        galleryModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Gallery modal close button
+    if (galleryModalClose) {
+        galleryModalClose.addEventListener('click', closeGalleryModal);
+    }
+
+    // Click outside gallery grid to close
+    if (galleryModal) {
+        galleryModal.addEventListener('click', function (e) {
+            if (e.target === galleryModal) closeGalleryModal();
+        });
+    }
+
+    // =============================================
+    // Open lightbox (called from gallery modal)
+    // =============================================
     function openLightbox(eventId, photoIndex) {
         currentEvent = eventId;
-
-        // Load photos based on event
-                if (eventId === 'aniversario2025') {
-            currentPhotos = aniversario2025Photos;
-        } else if (eventId === 'aniversario2024') {
-            currentPhotos = aniversario2024Photos;
-        } else if (eventId === 'padel2025') {
-            currentPhotos = padel2025Photos;
-        } else if (eventId === 'padel2024') {
-            currentPhotos = padel2024Photos;
-        } else if (eventId === 'convivio2024') {
-            currentPhotos = convivio2024Photos;
-        } else if (eventId === 'caminhada2024') {
-            currentPhotos = caminhada2024Photos;
-        } else if (eventId === 'taca2024') {
-            currentPhotos = tacaCarlosCarvalhoPhotos;
-        } else if (eventId === 'tomada2024') {
-            currentPhotos = tomadaPosse2024Photos;
-        } else if (eventId === 'tomada2026') {
-            currentPhotos = tomadaPosse2026Photos;
-        }
-
+        currentPhotos = getPhotosForEvent(eventId);
         currentIndex = photoIndex;
         updateLightboxImage();
         lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflow = 'hidden';
     }
 
-    // Close lightbox
+    // Close lightbox → return to gallery modal
     function closeLightbox() {
         lightbox.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
+        // Reopen gallery modal if it was the origin; body scroll stays locked
+        if (galleryModal && currentEvent) {
+            galleryModal.classList.add('active');
+            // body overflow stays 'hidden' so gallery modal is usable
+        } else {
+            document.body.style.overflow = '';
+        }
     }
 
     // Update lightbox image and counter
@@ -859,18 +971,20 @@ const tomadaPosse2026Photos = [
 
     // Keyboard navigation
     document.addEventListener('keydown', function (e) {
-        if (!lightbox.classList.contains('active')) return;
-
-        switch (e.key) {
-            case 'Escape':
-                closeLightbox();
-                break;
-            case 'ArrowLeft':
-                previousPhoto();
-                break;
-            case 'ArrowRight':
-                nextPhoto();
-                break;
+        if (lightbox.classList.contains('active')) {
+            switch (e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    previousPhoto();
+                    break;
+                case 'ArrowRight':
+                    nextPhoto();
+                    break;
+            }
+        } else if (galleryModal && galleryModal.classList.contains('active')) {
+            if (e.key === 'Escape') closeGalleryModal();
         }
     });
 

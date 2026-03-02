@@ -72,6 +72,7 @@
                 <li><a href="index.html#formacao" class="nav-link">Formação</a></li>
                 <li><a href="index.html#ser-arbitro" class="nav-link">Ser Árbitro</a></li>
                 <li><a href="eventos.html" class="nav-link active">Eventos</a></li>
+                <li><a href="historia.html" class="nav-link">História</a></li>
                 <li><a href="recursos.html" class="nav-link">Recursos</a></li>
                 <li><a href="index.html#contactos" class="nav-link">Contactos</a></li>
             </ul>
@@ -315,7 +316,24 @@
         </section>
     </main>
 
+    <!-- Gallery Modal (intermediate between event card and lightbox) -->
+    <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+        <div class="gallery-modal-header">
+            <div class="gallery-modal-header-info">
+                <h2 class="gallery-modal-title" id="galleryModalTitle">Galeria</h2>
+                <span class="gallery-modal-count" id="galleryModalCount"></span>
+            </div>
+            <button class="gallery-modal-close" id="galleryModalClose" aria-label="Fechar galeria">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="gallery-modal-grid" id="galleryModalGrid"></div>
+    </div>
+
     <!-- Lightbox Modal -->
+
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
         <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

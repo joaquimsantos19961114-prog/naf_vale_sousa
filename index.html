@@ -126,6 +126,7 @@
                 <li><a href="#formacao" class="nav-link">Formação</a></li>
                 <li><a href="#ser-arbitro" class="nav-link">Ser Árbitro</a></li>
                 <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                <li><a href="historia.html" class="nav-link">História</a></li>
                 <li><a href="recursos.html" class="nav-link">Recursos</a></li>
                 <li><a href="#contactos" class="nav-link">Contactos</a></li>
             </ul>
@@ -355,24 +356,101 @@
         </section>
 
         <!-- Eventos -->
-        <section class="section eventos">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Nossos Eventos</h2>
-                    <div class="title-underline"></div>
+        <section class="section eventos-section" id="eventos-section" aria-labelledby="eventos-title">
+
+            <!-- Background slides (photos) -->
+            <div class="eventos-slideshow" id="eventosSlideshow" role="region" aria-label="Galeria de eventos">
+
+                <!-- Slide 1 – Aniversário 2025 -->
+                <div class="slide active">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1769779604/IMG_2479_t8jkv9.jpg"
+                        alt="Aniversário 2025" loading="lazy">
                 </div>
-                <div class="content-centered">
-                    <p class="lead-text">Descobre os momentos especiais que marcam a vida do nosso núcleo. Das
-                        celebrações
-                        de aniversário às formações e convívios, cada evento reflete o espírito de união e dedicação que
-                        nos
-                        caracteriza.</p>
-                    <p class="eventos-description">Explora a nossa galeria de eventos e revive connosco estes momentos
-                        inesquecíveis.</p>
-                    <a href="eventos.html" class="cta-button primary large">Visualizar Eventos</a>
+                <!-- Slide 2 – Torneio de Padel 2025 -->
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1770807830/IMG_2062_zvfjtl.webp"
+                        alt="Torneio de Padel 2025" loading="lazy">
                 </div>
+                <!-- Slide 3 – Convívio 2024 -->
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1770382439/P1010296_yrtzpa.jpg"
+                        alt="Convívio 2024" loading="lazy">
+                </div>
+                <!-- Slide 4 – Aniversário 2025 -->
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1769779927/IMG_3383_qyradx.jpg"
+                        alt="Aniversário 2025" loading="lazy">
+                </div>
+                <!-- Slide 5 – Torneio de Padel 2025 -->
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1770808798/IMG_4827_a816jy.webp"
+                        alt="Torneio de Padel 2025" loading="lazy">
+                </div>
+                <!-- Slide 6 – Convívio 2024 -->
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1770382988/P1010425_glulbc.jpg"
+                        alt="Convívio 2024" loading="lazy">
+                </div>
+                <!-- Slide 7 – Aniversário 2025 -->
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1769779859/IMG_3224_kuzbqe.jpg"
+                        alt="Aniversário 2025" loading="lazy">
+                </div>
+                <!-- Slide 8 – Padel 2025 -->
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1770808751/IMG_4810_ih4tb4.webp"
+                        alt="Torneio de Padel 2025" loading="lazy">
+                </div>
+                <!-- Slide 9 – Convívio 2024 -->
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1770382230/P1010237_nttsfm.jpg"
+                        alt="Convívio 2024" loading="lazy">
+                </div>
+                <!-- Slide 10 – Aniversário 2025 -->
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/de0ffazcl/image/upload/v1769779793/IMG_3024_xc6pij.jpg"
+                        alt="Aniversário 2025" loading="lazy">
+                </div>
+
+                <!-- Dark + green gradient overlay (like hero) -->
+                <div class="eventos-overlay"></div>
+
+                <!-- Content layered above the overlay -->
+                <div class="eventos-content">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title light" id="eventos-title">Nossos Eventos</h2>
+                            <div class="title-underline"></div>
+                        </div>
+                        <p class="lead-text light content-centered">
+                            Descobre os momentos especiais que marcam a vida do nosso núcleo — das celebrações de
+                            aniversário aos convívios e torneios, cada evento reflete o espírito de união que nos
+                            caracteriza.
+                        </p>
+                        <div class="content-centered">
+                            <a href="eventos.html" class="cta-button primary large">Ver Todos os Eventos</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation arrows -->
+                <button class="slideshow-arrow slideshow-arrow-prev" id="slideshowPrev" aria-label="Foto anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+                <button class="slideshow-arrow slideshow-arrow-next" id="slideshowNext" aria-label="Próxima foto">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                </button>
+
+                <!-- Dot indicators -->
+                <div class="slideshow-dots" id="slideshowDots" role="tablist" aria-label="Selecionar slide"></div>
+
             </div>
         </section>
+
 
         <!-- Final CTA -->
         <section class="section cta-final">

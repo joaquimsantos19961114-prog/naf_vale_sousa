@@ -1911,3 +1911,661 @@ input[type="date"].form-input {
         padding: var(--spacing-lg);
     }
 }
+
+/* ===================================
+   Eventos — Full-section Slideshow
+   =================================== */
+
+/* Remove default section padding so slideshow fills edge-to-edge */
+.eventos-section {
+    padding: 0 !important;
+    position: relative;
+}
+
+/* Slideshow container = full section */
+.eventos-slideshow {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    height: 80vh;
+    max-height: 750px;
+    overflow: hidden;
+    background-color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Each slide — position:absolute, fills the container */
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+/* Dark + green gradient overlay — same style as the hero */
+.eventos-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.80), rgba(45, 95, 63, 0.70));
+    z-index: 2;
+}
+
+/* Content sits above the overlay, centered like the hero */
+.eventos-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-3xl) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* White text variants for elements inside the slideshow */
+.section-title.light {
+    color: var(--color-white);
+}
+
+.lead-text.light {
+    color: var(--color-off-white);
+    font-weight: var(--font-weight-light);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CTA button inside slideshow — remove the hero animation opacity:0 */
+.eventos-content .cta-button {
+    opacity: 1;
+    animation: none;
+    margin-top: var(--spacing-lg);
+}
+
+/* Arrow buttons — centered vertically in the slideshow */
+.slideshow-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background: rgba(10, 10, 10, 0.50);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+    backdrop-filter: blur(6px);
+}
+
+.slideshow-arrow svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.slideshow-arrow-prev {
+    left: var(--spacing-lg);
+}
+
+.slideshow-arrow-next {
+    right: var(--spacing-lg);
+}
+
+.slideshow-arrow:hover {
+    background: var(--color-accent-green);
+    border-color: var(--color-accent-green);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Dot indicators */
+.slideshow-dots {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slideshow-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.40);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.slideshow-dot.active,
+.slideshow-dot:hover {
+    background: var(--color-accent-green);
+    transform: scale(1.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .eventos-slideshow {
+        min-height: 500px;
+        height: 70vh;
+    }
+
+    .slideshow-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slideshow-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .slideshow-arrow-prev {
+        left: var(--spacing-sm);
+    }
+
+    .slideshow-arrow-next {
+        right: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .eventos-slideshow {
+        min-height: 420px;
+        height: 65vh;
+    }
+
+    .eventos-content {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* ===================================
+   Gallery Modal - Intermediate grid
+   =================================== */
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(5, 10, 5, 0.97);
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.gallery-modal.active {
+    display: flex;
+}
+
+/* Header */
+.gallery-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+    gap: 1rem;
+}
+
+.gallery-modal-header-info {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.gallery-modal-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gallery-modal-count {
+    font-size: 0.85rem;
+    color: var(--color-accent-green, #4caf50);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.gallery-modal-close {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.gallery-modal-close:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: rotate(90deg);
+}
+
+.gallery-modal-close svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Scrollable grid */
+.gallery-modal-grid {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-content: flex-start;
+}
+
+/* Individual thumbnail item — justified gallery */
+.gallery-modal-item {
+    /* flex-grow and flex-basis are set via JS once image loads */
+    flex-grow: 1;
+    /* proportional to aspect ratio */
+    flex-shrink: 1;
+    flex-basis: 180px;
+    /* minimum width before wrapping */
+    height: 220px;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #111;
+    position: relative;
+    outline: 2px solid transparent;
+    transition: outline-color 0.15s, transform 0.15s;
+}
+
+.gallery-modal-item:hover,
+.gallery-modal-item:focus-visible {
+    outline-color: var(--color-accent-green, #4caf50);
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+.gallery-modal-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* fill the fixed-height container, clipping only minimal edges */
+    display: block;
+    transition: opacity 0.3s;
+}
+
+/* Skeleton loading animation while image not yet loaded */
+.gallery-modal-thumb:not([src]),
+.gallery-modal-thumb[src=""] {
+    min-height: 150px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.06) 25%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0.06) 75%);
+    background-size: 400% 100%;
+    animation: gallery-skeleton 1.4s ease infinite;
+}
+
+@keyframes gallery-skeleton {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-modal-item {
+        height: 160px;
+        flex-basis: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-modal-item {
+        height: 120px;
+        flex-basis: 90px;
+    }
+
+    .gallery-modal-grid {
+        padding: 0.5rem;
+        gap: 4px;
+    }
+
+    .gallery-modal-title {
+        font-size: 1rem;
+    }
+}
+
+/* ===================================
+   História Page
+   =================================== */
+
+.historia-fundacao {
+    background: var(--color-off-white);
+}
+
+.historia-fundacao-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-3xl);
+}
+
+.historia-fundacao-badge {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--color-accent-green);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(45, 95, 63, 0.35);
+}
+
+.historia-year {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.historia-year-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-top: 4px;
+}
+
+.historia-section-title {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: var(--spacing-sm);
+}
+
+.historia-desc {
+    color: var(--color-medium-gray);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: var(--spacing-md);
+    max-width: 680px;
+}
+
+.historia-stats {
+    display: flex;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.historia-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.historia-stat-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-accent-green);
+    line-height: 1;
+}
+
+.historia-stat-label {
+    font-size: 0.78rem;
+    color: var(--color-medium-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* Presidente Atual */
+.historia-presidente {
+    background: #fff;
+}
+
+.presidente-atual-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    background: var(--color-off-white);
+    border: 1px solid var(--color-light-gray);
+    border-left: 5px solid var(--color-accent-green);
+    border-radius: 12px;
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.presidente-atual-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    background: var(--color-accent-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.presidente-atual-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.presidente-atual-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.presidente-atual-cargo {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent-green);
+}
+
+.presidente-atual-nome {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-black);
+    margin: 4px 0 8px;
+}
+
+.presidente-atual-desde {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: var(--color-medium-gray);
+    font-weight: 500;
+}
+
+.presidente-atual-badge {
+    flex-shrink: 0;
+}
+
+.badge-em-funções {
+    display: inline-block;
+    background: rgba(45, 95, 63, 0.12);
+    color: var(--color-accent-green);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(45, 95, 63, 0.25);
+}
+
+/* Presidentes Anteriores - Placeholder */
+.historia-presidentes {
+    background: var(--color-off-white);
+}
+
+.presidentes-placeholder {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--spacing-3xl) var(--spacing-xl);
+    background: #fff;
+    border-radius: 16px;
+    border: 2px dashed var(--color-light-gray);
+}
+
+.presidentes-placeholder-icon {
+    width: 72px;
+    height: 72px;
+    background: var(--color-off-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--color-medium-gray);
+}
+
+.presidentes-placeholder-icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+.presidentes-placeholder-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-dark-gray);
+    margin-bottom: var(--spacing-sm);
+}
+
+.presidentes-placeholder-text {
+    font-size: 0.95rem;
+    color: var(--color-medium-gray);
+    line-height: 1.7;
+}
+
+/* Timeline (pronta a usar) */
+.presidentes-timeline {
+    max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 40px;
+}
+
+.presidentes-timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-light-gray);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -34px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-accent-green);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px var(--color-accent-green);
+}
+
+.timeline-content {
+    background: #fff;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 10px;
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.timeline-periodo {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-accent-green);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.timeline-nome {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .historia-fundacao-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-xl);
+    }
+
+    .historia-stats {
+        justify-content: center;
+    }
+
+    .historia-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .presidente-atual-card {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-xl);
+    }
+
+    .presidente-atual-desde {
+        justify-content: center;
+    }
+}

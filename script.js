@@ -325,5 +325,84 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // ================================
+    // Eventos Slideshow Carousel
+    // ================================
+    (function () {
+        const slideshow = document.getElementById('eventosSlideshow');
+        if (!slideshow) return;
+
+        const slides = slideshow.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('slideshowDots');
+        const prevBtn = document.getElementById('slideshowPrev');
+        const nextBtn = document.getElementById('slideshowNext');
+        const totalSlides = slides.length;
+        let current = 0;
+        let autoTimer = null;
+        const INTERVAL = 4500; // ms between auto-advances
+
+        // Build dot indicators dynamically
+        slides.forEach(function (_, i) {
+            const dot = document.createElement('button');
+            dot.className = 'slideshow-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+            dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+            dot.addEventListener('click', function () {
+                goTo(i);
+                resetTimer();
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        function updateDots() {
+            const dots = dotsContainer.querySelectorAll('.slideshow-dot');
+            dots.forEach(function (dot, i) {
+                dot.classList.toggle('active', i === current);
+                dot.setAttribute('aria-selected', i === current ? 'true' : 'false');
+            });
+        }
+
+        function goTo(index) {
+            slides[current].classList.remove('active');
+            current = (index + totalSlides) % totalSlides;
+            slides[current].classList.add('active');
+            updateDots();
+        }
+
+        function next() { goTo(current + 1); }
+        function prev() { goTo(current - 1); }
+
+        function startTimer() {
+            autoTimer = setInterval(next, INTERVAL);
+        }
+
+        function resetTimer() {
+            clearInterval(autoTimer);
+            startTimer();
+        }
+
+        // Arrow button events
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function () { prev(); resetTimer(); });
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function () { next(); resetTimer(); });
+        }
+
+        // Keyboard navigation (left/right when slideshow is focused)
+        slideshow.setAttribute('tabindex', '0');
+        slideshow.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') { prev(); resetTimer(); }
+            if (e.key === 'ArrowRight') { next(); resetTimer(); }
+        });
+
+        // Pause on hover, resume on mouse leave
+        slideshow.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
+        slideshow.addEventListener('mouseleave', startTimer);
+
+        // Start auto-play
+        startTimer();
+    }());
 
 });
