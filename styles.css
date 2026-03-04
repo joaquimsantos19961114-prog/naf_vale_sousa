@@ -2049,6 +2049,7 @@ input[type="date"].form-input {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 /* CTA button inside slideshow — remove the hero animation opacity:0 */
@@ -2187,7 +2188,31 @@ input[type="date"].form-input {
     }
 
     .eventos-content {
-        padding: var(--spacing-xl) var(--spacing-sm);
+        padding: var(--spacing-md) var(--spacing-sm);
+        gap: var(--spacing-sm);
+    }
+
+    /* Smaller title inside the slideshow on mobile */
+    .eventos-content .section-title {
+        font-size: 1.6rem;
+    }
+
+    /* Clamp lead text to 3 lines so it doesn't overflow the slideshow */
+    .eventos-content .lead-text {
+        font-size: 0.88rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    /* Reduce button size on mobile — large variant is too tall */
+    .eventos-content .cta-button.large {
+        padding: var(--spacing-sm) var(--spacing-xl);
+        font-size: 0.95rem;
+        margin-top: var(--spacing-sm);
     }
 }
 
