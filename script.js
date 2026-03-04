@@ -140,8 +140,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Check if it's the socio form (has mobile field)
             if (document.getElementById('formMobile')) {
-                // Only name, email and mobile are required
-                if (!formData.name || !formData.email || !formData.mobile || !formData.dob) {
+                // Required: name, email, mobile, address, dob
+                if (!formData.name || !formData.email || !formData.mobile || !formData.address || !formData.dob) {
                     isValid = false;
                 }
             } else {
@@ -396,6 +396,20 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.key === 'ArrowLeft') { prev(); resetTimer(); }
             if (e.key === 'ArrowRight') { next(); resetTimer(); }
         });
+
+        // Touch/swipe support for tablet and mobile
+        let touchStartX = 0;
+        slideshow.addEventListener('touchstart', function (e) {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        slideshow.addEventListener('touchend', function (e) {
+            const deltaX = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(deltaX) > 50) {
+                if (deltaX < 0) { next(); } else { prev(); }
+                resetTimer();
+            }
+        }, { passive: true });
 
         // Pause on hover, resume on mouse leave
         slideshow.addEventListener('mouseenter', function () { clearInterval(autoTimer); });

@@ -1922,7 +1922,9 @@ input[type="date"].form-input {
     position: relative;
 }
 
-/* Slideshow container = full section */
+/* Slideshow container = full section
+   Using display:block (not flex) so overflow:hidden reliably clips
+   position:absolute slides on all browsers, including tablet Safari. */
 .eventos-slideshow {
     position: relative;
     width: 100%;
@@ -1931,15 +1933,18 @@ input[type="date"].form-input {
     max-height: 750px;
     overflow: hidden;
     background-color: var(--color-black);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
 }
 
 /* Each slide — position:absolute, fills the container */
 .slide {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     transition: opacity 0.8s ease;
     pointer-events: none;
@@ -1962,21 +1967,30 @@ input[type="date"].form-input {
 /* Dark + green gradient overlay — same style as the hero */
 .eventos-overlay {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(135deg, rgba(10, 10, 10, 0.80), rgba(45, 95, 63, 0.70));
     z-index: 2;
+    pointer-events: none;
 }
 
 /* Content sits above the overlay, centered like the hero */
 .eventos-content {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 3;
     width: 100%;
     text-align: center;
-    padding: var(--spacing-3xl) 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: var(--spacing-3xl) var(--spacing-md);
 }
 
 /* White text variants for elements inside the slideshow */
@@ -2017,6 +2031,7 @@ input[type="date"].form-input {
     cursor: pointer;
     transition: background var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .slideshow-arrow svg {
@@ -2067,10 +2082,18 @@ input[type="date"].form-input {
     transform: scale(1.3);
 }
 
-/* Responsive */
+/* Tablet */
+@media (max-width: 1024px) {
+    .eventos-slideshow {
+        min-height: 550px;
+        height: 75vh;
+    }
+}
+
+/* Mobile landscape / small tablet */
 @media (max-width: 768px) {
     .eventos-slideshow {
-        min-height: 500px;
+        min-height: 480px;
         height: 70vh;
     }
 
@@ -2091,16 +2114,21 @@ input[type="date"].form-input {
     .slideshow-arrow-next {
         right: var(--spacing-sm);
     }
+
+    .eventos-content {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
 }
 
+/* Small mobile */
 @media (max-width: 480px) {
     .eventos-slideshow {
-        min-height: 420px;
+        min-height: 400px;
         height: 65vh;
     }
 
     .eventos-content {
-        padding: var(--spacing-xl) 0;
+        padding: var(--spacing-xl) var(--spacing-sm);
     }
 }
 
