@@ -2865,14 +2865,19 @@ input[type="date"].form-input {
         justify-content: flex-start;
     }
 
-    /* Presidente atual card: horizontal */
-    .presidente-atual-card {
-        flex-direction: row;
-        text-align: left;
+    /* Presidentes: 4 columns in portrait tablet */
+    .presidentes-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .presidente-atual-desde {
-        justify-content: flex-start;
+    /* Limit photo height on tablet so cards don't dominate */
+    .presidente-card-foto {
+        max-height: 180px;
+    }
+
+    /* Presidente atual: keep it centered as a block card */
+    .presidente-atual-card {
+        max-width: 280px;
     }
 }
 
@@ -2950,6 +2955,21 @@ input[type="date"].form-input {
     /* Event cards grid: 3 columns */
     .event-cards-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Presidentes: 5 columns in landscape (smaller, proportionate cards) */
+    .presidentes-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    /* Limit photo height in landscape */
+    .presidente-card-foto {
+        max-height: 160px;
+    }
+
+    /* Presidente atual card: slightly smaller in landscape */
+    .presidente-atual-card {
+        max-width: 260px;
     }
 }
 
