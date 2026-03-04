@@ -374,6 +374,8 @@ document.addEventListener('DOMContentLoaded', function () {
         function prev() { goTo(current - 1); }
 
         function startTimer() {
+            // Don't auto-advance if user prefers reduced motion
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
             autoTimer = setInterval(next, INTERVAL);
         }
 

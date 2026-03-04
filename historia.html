@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description"
         content="História do NAF Vale do Sousa. Fundado a 25 de abril de 1992, conheça a nossa história, os presidentes e os momentos que nos definiram.">
     <meta name="keywords"
@@ -158,13 +158,8 @@
                     <div class="title-underline"></div>
                 </div>
                 <div class="presidente-atual-card">
-                    <div class="presidente-atual-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        </svg>
+                    <div class="presidente-atual-foto">
+                        <img src="presidentes/EMANUEL MOREIRA.jpg" alt="Fotografia de Emanuel Moreira" loading="lazy">
                     </div>
                     <div class="presidente-atual-info">
                         <span class="presidente-atual-cargo">Presidente</span>
@@ -177,11 +172,14 @@
                                 <line x1="8" y1="2" x2="8" y2="6" />
                                 <line x1="3" y1="10" x2="21" y2="10" />
                             </svg>
-                            Em funções desde Janeiro de 2026
+                            <span class="presidente-atual-desde-lines">
+                                <span>Presidente desde 2024</span>
+                                <span>2.&ordm; Mandato (2026&ndash;2028)</span>
+                            </span>
                         </span>
-                    </div>
-                    <div class="presidente-atual-badge">
-                        <span class="badge-em-funções">Em funções</span>
+                        <div class="presidente-atual-badge">
+                            <span class="badge-em-funções">2.º Mandato</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -193,37 +191,116 @@
                 <div class="section-header">
                     <h2 class="section-title" id="presidentes-title">Presidentes Anteriores</h2>
                     <div class="title-underline"></div>
+                    <br></br>
                     <p class="section-description">Os líderes que moldaram a história do nosso núcleo</p>
                 </div>
 
-                <!-- Placeholder - Em atualização -->
-                <div class="presidentes-placeholder">
-                    <div class="presidentes-placeholder-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10" />
-                            <line x1="12" y1="8" x2="12" y2="12" />
-                            <line x1="12" y1="16" x2="12.01" y2="16" />
-                        </svg>
-                    </div>
-                    <h3 class="presidentes-placeholder-title">Informação em atualização</h3>
-                    <p class="presidentes-placeholder-text">
-                        Estamos a recolher os dados históricos dos presidentes anteriores do NAF Vale do Sousa.
-                        Em breve esta secção será atualizada com a cronologia completa de liderança do nosso núcleo.
-                    </p>
-                </div>
+                <!-- Grelha de presidentes anteriores -->
+                <div class="presidentes-grid">
 
-                <!-- Timeline (será preenchida quando os dados estiverem disponíveis) -->
-                <!-- Estrutura pronta para adicionar presidentes:
-                <div class="presidentes-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-periodo">XXXX — XXXX</span>
-                            <h3 class="timeline-nome">Nome do Presidente</h3>
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/ALBERTO AZEVEDO.jpg" alt="Alberto Azevedo" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">Alberto Azevedo</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
                         </div>
                     </div>
+
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/AMILCAR DIAS.jpg" alt="Amílcar Dias" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">Amílcar Dias</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
+                        </div>
+                    </div>
+
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/ANTONIO LOBO.jpg" alt="António Lobo" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">António Lobo</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
+                        </div>
+                    </div>
+
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/CARLOS DIAS.jpg" alt="Carlos Dias" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">Carlos Dias</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
+                        </div>
+                    </div>
+
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/FERNANDO NUNES.jpg" alt="Fernando Nunes" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">Fernando Nunes</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
+                        </div>
+                    </div>
+
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/JORGE SOUSA.jpg" alt="Jorge Sousa" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">Jorge Sousa</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
+                        </div>
+                    </div>
+
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/JOSÉ MEIRELES.jpg" alt="José Meireles" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">José Meireles</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
+                        </div>
+                    </div>
+
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/JOÃO LAMARES.jpg" alt="João Lamares" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">João Lamares</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
+                        </div>
+                    </div>
+
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/MANUEL SOARES.jpg" alt="Manuel Soares" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">Manuel Soares</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
+                        </div>
+                    </div>
+
+                    <div class="presidente-card">
+                        <div class="presidente-card-foto">
+                            <img src="presidentes/PEDRO LAMAS.jpg" alt="Pedro Lamas" loading="lazy">
+                        </div>
+                        <div class="presidente-card-info">
+                            <h3 class="presidente-card-nome">Pedro Lamas</h3>
+                            <span class="presidente-card-periodo">(período a confirmar)</span>
+                        </div>
+                    </div>
+
                 </div>
-                -->
+                <p class="presidentes-aviso">* Os períodos de mandato serão atualizados assim que a informação estiver
+                    disponível.</p>
             </div>
         </section>
 
