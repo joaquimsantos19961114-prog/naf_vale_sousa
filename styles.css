@@ -650,12 +650,6 @@ textarea:focus:not(:focus-visible) {
     line-height: 1.7;
 }
 
-@media (max-width: 767px) {
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media (min-width: 768px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -738,12 +732,6 @@ textarea:focus:not(:focus-visible) {
     font-size: 1.1rem;
     color: var(--color-medium-gray);
     line-height: 1.8;
-}
-
-@media (max-width: 767px) {
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (min-width: 768px) {
