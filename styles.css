@@ -3476,14 +3476,14 @@ input[type="date"].form-input {
         text-align: center;
     }
 
-    /* Formação: 2 columns on portrait (wider phones > 400px) */
+    /* Formação: 1 column on portrait mobile */
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
-    /* Ser Árbitro: 2 columns */
+    /* Ser Árbitro: 1 column */
     .values-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     /* Destaques: single column on portrait */
