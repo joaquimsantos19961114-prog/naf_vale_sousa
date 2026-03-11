@@ -198,8 +198,15 @@ textarea:focus:not(:focus-visible) {
     padding-top: var(--spacing-sm);
     padding-bottom: var(--spacing-sm);
     max-width: 100%;
-    padding-left: var(--spacing-xl);
-    padding-right: var(--spacing-xl);
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+    .navbar .container {
+        padding-left: var(--spacing-xl);
+        padding-right: var(--spacing-xl);
+    }
 }
 
 .nav-brand {
@@ -520,6 +527,7 @@ textarea:focus:not(:focus-visible) {
     margin-bottom: var(--spacing-md);
     color: var(--color-medium-gray);
     font-size: 1.05rem;
+    text-align: left;
 }
 
 .lead-text {
@@ -631,7 +639,7 @@ textarea:focus:not(:focus-visible) {
     line-height: 1.7;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -715,7 +723,7 @@ textarea:focus:not(:focus-visible) {
     line-height: 1.8;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -3554,16 +3562,6 @@ input[type="date"].form-input {
         max-width: 70%;
     }
 
-    /* Smaller hero CTA in landscape */
-    .hero-cta {
-        gap: var(--spacing-sm);
-    }
-
-    .hero-cta .cta-button {
-        padding: var(--spacing-sm) var(--spacing-xl);
-        font-size: 0.9rem;
-    }
-
     /* Sections: tightest padding in landscape */
     .section {
         padding: var(--spacing-lg) 0;
@@ -3601,42 +3599,8 @@ input[type="date"].form-input {
         height: 36px;
     }
 
-    /* Formação: 3 or 4 columns to take advantage of width */
-    .features-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Ser Árbitro: 3 columns */
-    .values-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Destaques: 3 columns */
-    .highlights-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Event cards: 2 columns */
-    .event-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .event-card-image {
-        height: 200px;
-    }
-
-    /* Contact: 2 columns */
-    .contact-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* Contact map: shorter */
+    /* Contact map: shorter in landscape */
     .contact-map {
         height: 200px;
-    }
-
-    /* Footer: 2 columns */
-    .footer-content {
-        grid-template-columns: 1fr auto;
     }
 }
