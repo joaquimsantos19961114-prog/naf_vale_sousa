@@ -1103,6 +1103,71 @@ textarea:focus:not(:focus-visible) {
 }
 
 /* ===================================
+   Footer Apoios
+   =================================== */
+
+.footer-apoios {
+    border-top: 1px solid var(--color-dark-gray);
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-apoios-title {
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-medium-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-apoios-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+.apoio-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.apoio-logo:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.apoio-logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    max-width: 180px;
+    filter: grayscale(100%) brightness(1.5);
+    transition: filter var(--transition-fast);
+}
+
+.apoio-logo:hover img {
+    filter: grayscale(0%) brightness(1);
+}
+
+@media (max-width: 767px) {
+    .footer-apoios-logos {
+        gap: var(--spacing-lg);
+    }
+
+    .apoio-logo img {
+        height: 70px;
+        max-width: 150px;
+    }
+}
+
+/* ===================================
    Utility Classes
    =================================== */
 

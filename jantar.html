@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-PT">
 
 <head>
@@ -243,6 +243,38 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Apoios -->
+            <div class="footer-apoios">
+                <p class="footer-apoios-title">Apoios</p>
+                                <div class="footer-apoios-logos">
+                    <a class="apoio-logo" href="https://www.cm-paredes.pt/" target="_blank" rel="noopener noreferrer" title="C&#xE2;mara Municipal de Paredes">
+                        <img src="paredes.png" alt="C&#xE2;mara Municipal de Paredes" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://www.cm-lousada.pt/" target="_blank" rel="noopener noreferrer" title="C&#xE2;mara Municipal de Lousada">
+                        <img src="lousada.png" alt="C&#xE2;mara Municipal de Lousada" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://www.cm-penafiel.pt/" target="_blank" rel="noopener noreferrer" title="C&#xE2;mara Municipal de Penafiel">
+                        <img src="penafiel.png" alt="C&#xE2;mara Municipal de Penafiel" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://www.cm-pacosdeferreira.pt/" target="_blank" rel="noopener noreferrer" title="C&#xE2;mara Municipal de Pa&#xE7;os de Ferreira">
+                        <img src="pa&#xE7;os.png" alt="C&#xE2;mara Municipal de Pa&#xE7;os de Ferreira" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://cm-felgueiras.pt/" target="_blank" rel="noopener noreferrer" title="C&#xE2;mara Municipal de Felgueiras">
+                        <img src="felgueiras.png" alt="C&#xE2;mara Municipal de Felgueiras" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://apaf.pt/" target="_blank" rel="noopener noreferrer" title="APAF">
+                        <img src="Logo_APAF.png" alt="APAF - Associa&#xE7;&#xE3;o Portuguesa de &#xC1;rbitros de Futebol" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://www.fpf.pt/pt/" target="_blank" rel="noopener noreferrer" title="FPF">
+                        <img src="fpf.png" alt="FPF - Federa&#xE7;&#xE3;o Portuguesa de Futebol" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://afporto.pt/" target="_blank" rel="noopener noreferrer" title="AFP">
+                        <img src="afp.png" alt="AFP - Associa&#xE7;&#xE3;o de Futebol do Porto" loading="lazy">
+                    </a>
+                </div>
+            </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Núcleo de Árbitros de Futebol do Vale do Sousa. Todos os direitos reservados.</p>
             </div>
@@ -286,7 +318,7 @@
                 });
                 var count = items.length;
                 document.getElementById('totalParticipantes').textContent = count;
-                document.getElementById('totalCusto').textContent = (count * PRICE) + ' €';
+                document.getElementById('totalCusto').textContent = (count * PRICE) + ' â‚¬';
             }
 
             // Init first row
@@ -330,7 +362,7 @@
                 });
 
                 if (!valid) { showMsg('Por favor, preencha o nome de todos os participantes.', 'error'); return; }
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(respEmail)) { showMsg('Por favor, insira um email válido.', 'error'); return; }
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(respEmail)) { showMsg('Por favor, insira um email vÃ¡lido.', 'error'); return; }
 
                 var btn = document.getElementById('aniversarioSubmit');
                 var orig = btn.textContent;
@@ -343,10 +375,10 @@
                     resp_mobile: respTelemovel,
                     participants: names.join('\n'),
                     total_count: names.length,
-                    total_cost: (names.length * PRICE) + ' €',
-                    observacoes: observacoes || '—'
+                    total_cost: (names.length * PRICE) + ' â‚¬',
+                    observacoes: observacoes || 'â€”'
                 }).then(function () {
-                    showMsg('Inscrição confirmada com sucesso! Entraremos em contacto em breve.', 'success');
+                    showMsg('InscriÃ§Ã£o confirmada com sucesso! Entraremos em contacto em breve.', 'success');
                     document.getElementById('aniversarioForm').reset();
                     list.innerHTML = '';
                     list.appendChild(createRow(1));
