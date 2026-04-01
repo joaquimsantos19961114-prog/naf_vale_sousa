@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Página não encontrada - NAF Vale do Sousa">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>404 - Página Não Encontrada | NAF Vale do Sousa</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ===================================
+           404 Page Specific Styles
+           =================================== */
+
+        .error-page {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Push footer to the bottom */
+        .error-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px var(--spacing-md) var(--spacing-3xl);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a2e1f 50%, #0a0a0a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated background grid */
+        .error-main::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(45, 95, 63, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(45, 95, 63, 0.06) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
+
+        /* Glowing orbs */
+        .error-main::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(45, 95, 63, 0.15) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .error-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* Big 404 number */
+        .error-code {
+            font-size: clamp(7rem, 20vw, 14rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: var(--spacing-md);
+            background: linear-gradient(135deg, #2d5f3f 0%, #4a9e6a 40%, #1a4d6f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            letter-spacing: -0.03em;
+        }
+
+        /* Whistle icon above the number */
+        .error-icon {
+            font-size: 3.5rem;
+            margin-bottom: var(--spacing-md);
+            display: block;
+            animation: whistle 2s ease-in-out infinite;
+        }
+
+        @keyframes whistle {
+            0%, 100% { transform: rotate(-5deg) scale(1); }
+            50% { transform: rotate(5deg) scale(1.1); }
+        }
+
+        .error-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            background: rgba(45, 95, 63, 0.15);
+            border: 1px solid rgba(45, 95, 63, 0.35);
+            color: #4a9e6a;
+            padding: 6px 18px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .error-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4a9e6a;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        .error-title {
+            color: #ffffff;
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.3;
+        }
+
+        .error-description {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: var(--spacing-2xl);
+            font-weight: 300;
+        }
+
+        /* Action buttons */
+        .error-actions {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            align-items: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        @media (min-width: 480px) {
+            .error-actions {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .btn-primary-404 {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--color-accent-green), #1a4d6f);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary-404:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(45, 95, 63, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .btn-primary-404 svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-outline-404 {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .btn-outline-404:hover {
+            border-color: rgba(255, 255, 255, 0.6);
+            color: #fff;
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-outline-404 svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Quick links */
+        .error-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-xs) var(--spacing-md);
+        }
+
+        .error-links-label {
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .error-link {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .error-link:hover {
+            color: #4a9e6a;
+            border-bottom-color: #4a9e6a;
+        }
+
+        /* Divider */
+        .error-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-accent-green), var(--color-accent-blue));
+            margin: 0 auto var(--spacing-xl);
+            border-radius: 2px;
+        }
+
+        /* Countdown redirect */
+        .error-countdown {
+            margin-top: var(--spacing-xl);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        #countdown-number {
+            color: #4a9e6a;
+            font-weight: 700;
+        }
+
+        /* Override cta-button animation for non-hero context */
+        .btn-primary-404,
+        .btn-outline-404 {
+            opacity: 1;
+            animation: none;
+        }
+
+        /* ===================================
+           Navbar override for dark background
+           =================================== */
+        .navbar {
+            background-color: rgba(10, 10, 10, 0.95);
+        }
+
+        /* ===================================
+           Footer on 404 page
+           =================================== */
+        .error-page .footer {
+            background-color: #0a0a0a;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body class="error-page">
+    <!-- Skip to content -->
+    <a href="#error-main" class="skip-to-content">Ir para o conteúdo principal</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.png" alt="NAF Vale do Sousa Logo" class="brand-logo">
+                <span class="brand-text">NAF Vale do Sousa</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false"
+                aria-controls="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                <li><a href="index.html#quem-somos" class="nav-link">Quem Somos</a></li>
+                <li><a href="index.html#formacao" class="nav-link">Formação</a></li>
+                <li><a href="index.html#ser-arbitro" class="nav-link">Ser Árbitro</a></li>
+                <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                <li><a href="historia.html" class="nav-link">História</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos</a></li>
+                <li><a href="index.html#contactos" class="nav-link">Contactos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 404 Main Content -->
+    <main class="error-main" id="error-main" role="main">
+        <div class="error-content">
+
+            <span class="error-icon" role="img" aria-label="Apito de árbitro">🏁</span>
+
+            <div class="error-badge">Erro 404</div>
+
+            <div class="error-code" aria-label="Código de erro 404">404</div>
+
+            <div class="error-divider"></div>
+
+            <h1 class="error-title">Página Não Encontrada</h1>
+
+            <p class="error-description">
+                Parece que o árbitro assinalou fora de jogo!<br>
+                A página que procuras não existe ou foi movida para outra localização.
+            </p>
+
+            <div class="error-actions">
+                <a href="index.html" class="btn-primary-404" id="btn-home-404">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    Voltar ao Início
+                </a>
+                <a href="javascript:history.back()" class="btn-outline-404" id="btn-back-404">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                    Página Anterior
+                </a>
+            </div>
+
+            <div class="error-links">
+                <span class="error-links-label">Páginas disponíveis</span>
+                <a href="eventos.html" class="error-link">Eventos</a>
+                <a href="historia.html" class="error-link">História</a>
+                <a href="recursos.html" class="error-link">Recursos</a>
+                <a href="socio.html" class="error-link">Tornar-me Sócio</a>
+                <a href="index.html#contactos" class="error-link">Contactos</a>
+            </div>
+
+            <p class="error-countdown">
+                Será redirecionado para a página inicial em <span id="countdown-number">10</span> segundos
+            </p>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="footer-brand">
+                    <img src="logo.png" alt="NAF Vale do Sousa Logo" class="footer-logo">
+                    <div class="footer-brand-text">
+                        <h3>NAF Vale do Sousa</h3>
+                        <p>Um núcleo de todos e para todos</p>
+                    </div>
+                </a>
+                <div class="footer-links">
+                    <a href="index.html#inicio" class="footer-link">Início</a>
+                    <a href="index.html#quem-somos" class="footer-link">Quem Somos</a>
+                    <a href="index.html#formacao" class="footer-link">Formação</a>
+                    <a href="index.html#ser-arbitro" class="footer-link">Ser Árbitro</a>
+                    <a href="eventos.html" class="footer-link">Eventos</a>
+                    <a href="historia.html" class="footer-link">História</a>
+                    <a href="recursos.html" class="footer-link">Recursos</a>
+                    <a href="index.html#contactos" class="footer-link">Contactos</a>
+                    <a href="socio.html" class="footer-link">Torna-te Sócio</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/nucleoarbitrosfutebolvaledosousa/?locale=pt_PT" target="_blank"
+                        rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/nafvaledosousa/" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Apoios -->
+            <div class="footer-apoios">
+                <p class="footer-apoios-title">Apoios</p>
+                <div class="footer-apoios-logos">
+                    <a class="apoio-logo" href="https://www.cm-paredes.pt/" target="_blank" rel="noopener noreferrer" title="Câmara Municipal de Paredes">
+                        <img src="paredes.png" alt="Câmara Municipal de Paredes" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://www.cm-lousada.pt/" target="_blank" rel="noopener noreferrer" title="Câmara Municipal de Lousada">
+                        <img src="lousada.png" alt="Câmara Municipal de Lousada" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://www.cm-penafiel.pt/" target="_blank" rel="noopener noreferrer" title="Câmara Municipal de Penafiel">
+                        <img src="penafiel.png" alt="Câmara Municipal de Penafiel" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://www.cm-pacosdeferreira.pt/" target="_blank" rel="noopener noreferrer" title="Câmara Municipal de Paços de Ferreira">
+                        <img src="paços.png" alt="Câmara Municipal de Paços de Ferreira" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://cm-felgueiras.pt/" target="_blank" rel="noopener noreferrer" title="Câmara Municipal de Felgueiras">
+                        <img src="felgueiras.png" alt="Câmara Municipal de Felgueiras" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://apaf.pt/" target="_blank" rel="noopener noreferrer" title="APAF">
+                        <img src="Logo_APAF.png" alt="APAF - Associação Portuguesa de Árbitros de Futebol" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://www.fpf.pt/pt/" target="_blank" rel="noopener noreferrer" title="FPF">
+                        <img src="fpf.png" alt="FPF - Federação Portuguesa de Futebol" loading="lazy">
+                    </a>
+                    <a class="apoio-logo" href="https://afporto.pt/" target="_blank" rel="noopener noreferrer" title="AFP">
+                        <img src="afp.png" alt="AFP - Associação de Futebol do Porto" loading="lazy">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Núcleo de Árbitros de Futebol do Vale do Sousa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ── Mobile nav toggle ──────────────────────────────
+        const navToggle = document.getElementById('navToggle');
+        const navMenu   = document.getElementById('navMenu');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('active');
+                navToggle.setAttribute('aria-expanded', isOpen);
+            });
+        }
+
+        // ── Auto-redirect countdown ────────────────────────
+        let seconds = 10;
+        const countdownEl = document.getElementById('countdown-number');
+
+        const timer = setInterval(() => {
+            seconds--;
+            if (countdownEl) countdownEl.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+
+        // Cancel countdown if user interacts with navigation
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('click', () => clearInterval(timer));
+        });
+    </script>
+</body>
+
+</html>
