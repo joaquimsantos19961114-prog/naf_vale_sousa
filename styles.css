@@ -3706,3 +3706,30 @@ input[type="date"].form-input {
     color: #b48214;
     margin-top: 2px;
 }
+
+/* ===================================
+   Jantar — Local do Jantar (map area)
+   =================================== */
+
+.jantar-local-info {
+    display: grid;
+    gap: var(--spacing-xl);
+    align-items: start;
+    margin-top: var(--spacing-xl);
+}
+
+.jantar-local-info .contact-map {
+    margin-top: 0;
+}
+
+.jantar-local-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .jantar-local-info {
+        grid-template-columns: 280px 1fr;
+    }
+}
