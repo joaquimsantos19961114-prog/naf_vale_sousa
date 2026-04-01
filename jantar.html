@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-PT">
 
 <head>
@@ -178,6 +178,21 @@
                                 <div class="aniversario-summary-row total">
                                     <span>Total a pagar</span>
                                     <strong id="totalCusto">30 €</strong>
+                                </div>
+                            </div>
+
+                            <!-- Nota de pagamento -->
+                            <div class="aniversario-payment-note" role="note" aria-label="Informação de pagamento">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
+                                    height="18" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                </svg>
+                                <div>
+                                    <strong>Pagamento no local</strong> — O valor será cobrado no próprio dia do jantar.
+                                    Meios de pagamento aceites: <strong>Dinheiro</strong> (preferencial) e <strong>MB
+                                        Way</strong>.
                                 </div>
                             </div>
 
@@ -371,7 +386,7 @@
                 });
 
                 if (!valid) { showMsg('Por favor, preencha o nome de todos os participantes.', 'error'); return; }
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(respEmail)) { showMsg('Por favor, insira um email vÃ¡lido.', 'error'); return; }
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(respEmail)) { showMsg('Por favor, insira um email válido.', 'error'); return; }
 
                 var btn = document.getElementById('aniversarioSubmit');
                 var orig = btn.textContent;
@@ -384,10 +399,10 @@
                     resp_mobile: respTelemovel,
                     participants: names.join('\n'),
                     total_count: names.length,
-                    total_cost: (names.length * PRICE) + ' â‚¬',
-                    observacoes: observacoes || 'â€”'
+                    total_cost: (names.length * PRICE) + ' €',
+                    observacoes: observacoes || '—'
                 }).then(function () {
-                    showMsg('InscriÃ§Ã£o confirmada com sucesso! Entraremos em contacto em breve.', 'success');
+                    showMsg('Inscrição confirmada com sucesso! Entraremos em contacto em breve.', 'success');
                     document.getElementById('aniversarioForm').reset();
                     list.innerHTML = '';
                     list.appendChild(createRow(1));
