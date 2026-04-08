@@ -42,4 +42,12 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- Jantar de Aniversário -->
+  <url>
+    <loc>https://nafvalesousa.pt/jantar.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
