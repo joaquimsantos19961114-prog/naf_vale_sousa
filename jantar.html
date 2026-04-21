@@ -4,29 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description"
-        content="Inscreve-te no Jantar de Aniversário do NAF Vale do Sousa — 24 de Abril de 2026, Quinta de Luson. Preço: 30€ por pessoa.">
-    <meta name="author" content="NAF Vale do Sousa">
-    <title>Jantar de Aniversário 2026 — NAF Vale do Sousa</title>
+    <meta name="description" content="Inscrições encerradas — Jantar de Aniversário do NAF Vale do Sousa 2026.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Inscrições Encerradas — NAF Vale do Sousa</title>
+
+    <!-- Redirect to eventos.html -->
+    <meta http-equiv="refresh" content="10;url=eventos.html">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://nafvalesousa.pt/jantar.html">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nafvalesousa.pt/jantar.html">
-    <meta property="og:title" content="Jantar de Aniversário 2026 — NAF Vale do Sousa">
-    <meta property="og:description" content="Inscreve-te no Jantar de Aniversário do NAF Vale do Sousa — 24 de Abril de 2026, Quinta do Luson. Preço: 30€ por pessoa.">
-    <meta property="og:image" content="https://nafvalesousa.pt/logo.png">
-    <meta property="og:locale" content="pt_PT">
-    <meta property="og:site_name" content="NAF Vale do Sousa">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://nafvalesousa.pt/jantar.html">
-    <meta name="twitter:title" content="Jantar de Aniversário 2026 — NAF Vale do Sousa">
-    <meta name="twitter:description" content="Inscreve-te no Jantar de Aniversário do NAF Vale do Sousa — 24 de Abril de 2026, Quinta do Luson.">
-    <meta name="twitter:image" content="https://nafvalesousa.pt/logo.png">
+    <link rel="canonical" href="https://nafvalesousa.pt/eventos.html">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,190 +67,23 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <section class="section socios" aria-labelledby="jantar-title">
+        <section class="section socios" aria-labelledby="encerrado-title">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title" id="jantar-title">Inscrição</h2>
+                    <h2 class="section-title" id="encerrado-title">Inscrições Encerradas</h2>
                     <div class="title-underline"></div>
                 </div>
 
-                <!-- Event Info Banner -->
-                <div class="aniversario-banner">
-                    <div class="aniversario-info-item">
-                        <span class="aniversario-info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28"
-                                height="28">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                                <line x1="16" y1="2" x2="16" y2="6" />
-                                <line x1="8" y1="2" x2="8" y2="6" />
-                                <line x1="3" y1="10" x2="21" y2="10" />
-                            </svg>
-                        </span>
-                        <div>
-                            <span class="aniversario-info-label">Data</span>
-                            <span class="aniversario-info-value">24 de Abril de 2026</span>
-                        </div>
-                    </div>
-                    <div class="aniversario-info-item">
-                        <span class="aniversario-info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28"
-                                height="28">
-                                <path
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                        </span>
-                        <div>
-                            <span class="aniversario-info-label">Local</span>
-                            <span class="aniversario-info-value">Quinta de Luson</span>
-                        </div>
-                    </div>
-                    <div class="aniversario-info-item">
-                        <span class="aniversario-info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28"
-                                height="28">
-                                <line x1="12" y1="1" x2="12" y2="23" />
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                            </svg>
-                        </span>
-                        <div>
-                            <span class="aniversario-info-label">Preço por pessoa</span>
-                            <span class="aniversario-info-value">30 €</span>
-                        </div>
-                    </div>
-                    <div class="aniversario-info-item">
-                        <span class="aniversario-info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28"
-                                height="28">
-                                <circle cx="12" cy="12" r="10" />
-                                <polyline points="12 6 12 12 16 14" />
-                            </svg>
-                        </span>
-                        <div>
-                            <span class="aniversario-info-label">Faltam</span>
-                            <span class="aniversario-info-value" id="countdownValue">-- dias</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Form -->
-                <div class="form-centered-container">
-                    <div class="contact-form-container form-large">
-                        <h3 class="contact-heading text-center">Formulário de Inscrição</h3>
-                        <form class="contact-form" id="aniversarioForm"
-                            aria-label="Formulário de inscrição no Jantar de Aniversário 2026">
-
-                            <div class="aniversario-section-label">Responsável pela Inscrição</div>
-                            <div class="form-group">
-                                <label for="respNome" class="form-label">Nome Completo *</label>
-                                <input type="text" id="respNome" name="respNome" class="form-input" required
-                                    aria-required="true" autocomplete="name">
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="respEmail" class="form-label">Email *</label>
-                                    <input type="email" id="respEmail" name="respEmail" class="form-input" required
-                                        aria-required="true" autocomplete="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="respTelemovel" class="form-label">Telemóvel *</label>
-                                    <input type="tel" id="respTelemovel" name="respTelemovel" class="form-input"
-                                        required aria-required="true" autocomplete="tel">
-                                </div>
-                            </div>
-
-                            <div class="aniversario-section-label" style="margin-top:var(--spacing-lg)">Participantes
-                            </div>
-                            <p class="aniversario-participants-hint">Inclua o nome de todos os participantes (incluindo
-                                o seu, se participar).</p>
-
-                            <div id="participantesList"></div>
-
-                            <button type="button" class="aniversario-add-btn" id="addParticipante">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16"
-                                    height="16">
-                                    <path d="M12 5v14M5 12h14" />
-                                </svg>
-                                Adicionar Participante
-                            </button>
-
-                            <!-- Resumo -->
-                            <div class="aniversario-summary">
-                                <div class="aniversario-summary-row">
-                                    <span>Nº de participantes</span>
-                                    <strong id="totalParticipantes">1</strong>
-                                </div>
-                                <div class="aniversario-summary-row total">
-                                    <span>Total a pagar</span>
-                                    <strong id="totalCusto">30 €</strong>
-                                </div>
-                            </div>
-
-                            <!-- Nota de pagamento -->
-                            <div class="aniversario-payment-note" role="note" aria-label="Informação de pagamento">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
-                                    height="18" aria-hidden="true">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <line x1="12" y1="8" x2="12" y2="12" />
-                                    <line x1="12" y1="16" x2="12.01" y2="16" />
-                                </svg>
-                                <div>
-                                    <strong>Pagamento no local</strong> — O valor será cobrado no próprio dia do jantar.
-                                    Meios de pagamento aceites: <strong>Dinheiro</strong> (preferencial) e <strong>MB
-                                        Way</strong>.
-                                </div>
-                            </div>
-
-                            <div class="form-group" style="margin-top: var(--spacing-xl);">
-                                <label for="anivObservacoes" class="form-label">Observações (alergias, restrições
-                                    alimentares, etc.)</label>
-                                <textarea id="anivObservacoes" name="observacoes" class="form-textarea"
-                                    rows="3"></textarea>
-                            </div>
-
-                            <button type="submit" class="cta-button primary full-width" id="aniversarioSubmit">Confirmar
-                                Inscrição</button>
-                            <div class="form-message" id="aniversarioMessage" role="alert" aria-live="polite"></div>
-                        </form>
-                    </div>
-                </div>
-
-
-                <!-- Local do Jantar -->
-                <div class="section-header" style="margin-top: var(--spacing-3xl);">
-                    <h2 class="section-title" id="local-title">Local do Jantar</h2>
-                    <div class="title-underline"></div>
-                </div>
-
-                <div class="jantar-local-info">
-                    <div class="jantar-local-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Morada</span>
-                                <span class="contact-value">Rua 25 de Abril, nº 90<br>4580-342 Cristelo, Paredes</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="contact-map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d530.8248788238318!2d-8.35903101395685!3d41.23189006423685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd248d306a74f26b%3A0x5e421cc9bbf2caf2!2sQuinta%20do%20Luson!5e1!3m2!1spt-PT!2spt!4v1775043327962!5m2!1spt-PT!2spt"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Localização da Quinta do Luson, Cristelo, Paredes">
-                        </iframe>
-                    </div>
-                </div>
-
-                <div style="text-align:center; margin-top: var(--spacing-xl);">
-                    <a href="eventos.html" class="nav-link" style="color: var(--color-light-gray); font-size:0.9rem;">
+                <div style="text-align: center; max-width: 600px; margin: var(--spacing-2xl) auto;">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-lg);">🎉</div>
+                    <p style="font-size: 1.2rem; color: var(--color-light-gray); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+                        O período de inscrições para o <strong>Jantar de Aniversário 2026</strong> já encerrou.<br>
+                        O jantar realiza-se a <strong>24 de abril de 2026</strong> na Quinta de Luson.
+                    </p>
+                    <p style="color: var(--color-medium-gray); font-size: 0.95rem; margin-bottom: var(--spacing-2xl);">
+                        Será redirecionado para a página de Eventos em <strong id="countdown">10</strong> segundos...
+                    </p>
+                    <a href="eventos.html" class="cta-button primary" style="font-size: 1rem; padding: 0.85rem 2.5rem;">
                         ← Voltar aos Eventos
                     </a>
                 </div>
@@ -317,37 +136,37 @@
                 <p class="footer-apoios-title">Apoios</p>
                 <div class="footer-apoios-logos">
                     <a class="apoio-logo" href="https://www.cm-paredes.pt/" target="_blank" rel="noopener noreferrer"
-                        title="C&#xE2;mara Municipal de Paredes">
-                        <img src="paredes.png" alt="C&#xE2;mara Municipal de Paredes" loading="lazy">
+                        title="Câmara Municipal de Paredes">
+                        <img src="paredes.png" alt="Câmara Municipal de Paredes" loading="lazy">
                     </a>
                     <a class="apoio-logo" href="https://www.cm-lousada.pt/" target="_blank" rel="noopener noreferrer"
-                        title="C&#xE2;mara Municipal de Lousada">
-                        <img src="lousada.png" alt="C&#xE2;mara Municipal de Lousada" loading="lazy">
+                        title="Câmara Municipal de Lousada">
+                        <img src="lousada.png" alt="Câmara Municipal de Lousada" loading="lazy">
                     </a>
                     <a class="apoio-logo" href="https://www.cm-penafiel.pt/" target="_blank" rel="noopener noreferrer"
-                        title="C&#xE2;mara Municipal de Penafiel">
-                        <img src="penafiel.png" alt="C&#xE2;mara Municipal de Penafiel" loading="lazy">
+                        title="Câmara Municipal de Penafiel">
+                        <img src="penafiel.png" alt="Câmara Municipal de Penafiel" loading="lazy">
                     </a>
                     <a class="apoio-logo" href="https://www.cm-pacosdeferreira.pt/" target="_blank"
-                        rel="noopener noreferrer" title="C&#xE2;mara Municipal de Pa&#xE7;os de Ferreira">
-                        <img src="pa&#xE7;os.png" alt="C&#xE2;mara Municipal de Pa&#xE7;os de Ferreira" loading="lazy">
+                        rel="noopener noreferrer" title="Câmara Municipal de Paços de Ferreira">
+                        <img src="paços.png" alt="Câmara Municipal de Paços de Ferreira" loading="lazy">
                     </a>
                     <a class="apoio-logo" href="https://cm-felgueiras.pt/" target="_blank" rel="noopener noreferrer"
-                        title="C&#xE2;mara Municipal de Felgueiras">
-                        <img src="felgueiras.png" alt="C&#xE2;mara Municipal de Felgueiras" loading="lazy">
+                        title="Câmara Municipal de Felgueiras">
+                        <img src="felgueiras.png" alt="Câmara Municipal de Felgueiras" loading="lazy">
                     </a>
                     <a class="apoio-logo" href="https://apaf.pt/" target="_blank" rel="noopener noreferrer"
                         title="APAF">
                         <img src="Logo_APAF.png"
-                            alt="APAF - Associa&#xE7;&#xE3;o Portuguesa de &#xC1;rbitros de Futebol" loading="lazy">
+                            alt="APAF - Associação Portuguesa de Árbitros de Futebol" loading="lazy">
                     </a>
                     <a class="apoio-logo" href="https://www.fpf.pt/pt/" target="_blank" rel="noopener noreferrer"
                         title="FPF">
-                        <img src="fpf.png" alt="FPF - Federa&#xE7;&#xE3;o Portuguesa de Futebol" loading="lazy">
+                        <img src="fpf.png" alt="FPF - Federação Portuguesa de Futebol" loading="lazy">
                     </a>
                     <a class="apoio-logo" href="https://afporto.pt/" target="_blank" rel="noopener noreferrer"
                         title="AFP">
-                        <img src="afp.png" alt="AFP - Associa&#xE7;&#xE3;o de Futebol do Porto" loading="lazy">
+                        <img src="afp.png" alt="AFP - Associação de Futebol do Porto" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -358,131 +177,21 @@
         </div>
     </footer>
 
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        emailjs.init('wbR97k2exBuXf6jrH');
-    </script>
+    <script src="cookie-consent.js" defer></script>
     <script src="script.js" defer></script>
     <script>
+        // Countdown para redirecionamento automático
         (function () {
-            var PRICE = 30;
-
-            function createRow(num) {
-                var div = document.createElement('div');
-                div.className = 'participante-item';
-                div.innerHTML =
-                    '<span class="participante-num">' + num + '</span>' +
-                    '<input type="text" class="form-input participante-input" placeholder="Nome do participante" aria-label="Nome do participante ' + num + '">' +
-                    '<button type="button" class="participante-remove-btn" aria-label="Remover participante">' +
-                    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 6L6 18M6 6l12 12"/></svg>' +
-                    '</button>';
-                div.querySelector('.participante-remove-btn').addEventListener('click', function () {
-                    if (document.querySelectorAll('.participante-item').length > 1) {
-                        div.remove();
-                        refresh();
-                    }
-                });
-                return div;
-            }
-
-            function refresh() {
-                var items = document.querySelectorAll('.participante-item');
-                items.forEach(function (item, i) {
-                    item.querySelector('.participante-num').textContent = i + 1;
-                    item.querySelector('.participante-input').setAttribute('aria-label', 'Nome do participante ' + (i + 1));
-                    item.querySelector('.participante-remove-btn').style.visibility = items.length === 1 ? 'hidden' : 'visible';
-                });
-                var count = items.length;
-                document.getElementById('totalParticipantes').textContent = count;
-                document.getElementById('totalCusto').textContent = (count * PRICE) + ' €';
-            }
-
-            // Init first row
-            var list = document.getElementById('participantesList');
-            list.appendChild(createRow(1));
-            refresh();
-
-            // Add participant
-            document.getElementById('addParticipante').addEventListener('click', function () {
-                var count = document.querySelectorAll('.participante-item').length;
-                var row = createRow(count + 1);
-                list.appendChild(row);
-                refresh();
-                row.querySelector('.participante-input').focus();
-            });
-
-            // Countdown
-            (function () {
-                var target = new Date('2026-04-24T00:00:00');
-                var days = Math.floor((target - new Date()) / 86400000);
-                var el = document.getElementById('countdownValue');
-                if (el) el.textContent = days > 0 ? days + ' dias' : 'Hoje!';
-            })();
-
-            // Submit
-            document.getElementById('aniversarioForm').addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                var respNome = document.getElementById('respNome').value.trim();
-                var respEmail = document.getElementById('respEmail').value.trim();
-                var respTelemovel = document.getElementById('respTelemovel').value.trim();
-                var observacoes = document.getElementById('anivObservacoes').value.trim();
-
-                var inputs = document.querySelectorAll('.participante-input');
-                var names = [];
-                var valid = true;
-                inputs.forEach(function (inp, i) {
-                    var v = inp.value.trim();
-                    if (!v) { valid = false; inp.focus(); }
-                    else names.push((i + 1) + '. ' + v);
-                });
-
-                if (!valid) { showMsg('Por favor, preencha o nome de todos os participantes.', 'error'); return; }
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(respEmail)) { showMsg('Por favor, insira um email válido.', 'error'); return; }
-
-                var btn = document.getElementById('aniversarioSubmit');
-                var orig = btn.textContent;
-                btn.disabled = true;
-                btn.textContent = 'A enviar...';
-
-                emailjs.send('service_js_naf', 'template_aniversario', {
-                    resp_name: respNome,
-                    resp_email: respEmail,
-                    resp_mobile: respTelemovel,
-                    participants: names.join('\n'),
-                    total_count: names.length,
-                    total_cost: (names.length * PRICE) + ' €',
-                    observacoes: observacoes || '—'
-                }).then(function () {
-                    showMsg('Inscrição confirmada com sucesso! Entraremos em contacto em breve.', 'success');
-                    document.getElementById('aniversarioForm').reset();
-                    list.innerHTML = '';
-                    list.appendChild(createRow(1));
-                    refresh();
-                    btn.disabled = false;
-                    btn.textContent = orig;
-                    setTimeout(function () { hideMsg(); }, 5000);
-                }, function (err) {
-                    showMsg('Erro ao enviar. Por favor tente novamente.', 'error');
-                    btn.disabled = false;
-                    btn.textContent = orig;
-                    console.error('EmailJS:', err);
-                    setTimeout(function () { hideMsg(); }, 5000);
-                });
-            });
-
-            function showMsg(msg, type) {
-                var el = document.getElementById('aniversarioMessage');
-                if (!el) return;
-                el.textContent = msg;
-                el.className = 'form-message ' + type;
-                el.style.display = 'block';
-            }
-            function hideMsg() {
-                var el = document.getElementById('aniversarioMessage');
-                if (el) el.style.display = 'none';
-            }
+            var seconds = 10;
+            var el = document.getElementById('countdown');
+            var interval = setInterval(function () {
+                seconds--;
+                if (el) el.textContent = seconds;
+                if (seconds <= 0) {
+                    clearInterval(interval);
+                    window.location.href = 'eventos.html';
+                }
+            }, 1000);
         })();
     </script>
 </body>
