@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="O novo website do NAF Vale do Sousa está a ser preparado. Brevemente online.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Brevemente — NAF Vale do Sousa</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --green-primary: #2d7a3a;
+            --green-light: #3d9e4e;
+            --green-dark: #1a5227;
+            --green-glow: rgba(45, 122, 58, 0.4);
+            --white: #ffffff;
+            --white-muted: rgba(255, 255, 255, 0.75);
+            --white-faint: rgba(255, 255, 255, 0.12);
+            --dark: #0d1a0f;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* ── Animated background ── */
+        .bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-img {
+            position: absolute;
+            inset: 0;
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.18;
+            animation: slowZoom 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to   { transform: scale(1.08); }
+        }
+
+        .bg-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                160deg,
+                rgba(13, 26, 15, 0.92) 0%,
+                rgba(26, 82, 39, 0.55) 50%,
+                rgba(13, 26, 15, 0.95) 100%
+            );
+        }
+
+        /* Floating orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.18;
+            animation: drift 12s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 480px; height: 480px;
+            background: var(--green-primary);
+            top: -120px; left: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 320px; height: 320px;
+            background: var(--green-light);
+            bottom: -80px; right: -60px;
+            animation-delay: -6s;
+        }
+
+        @keyframes drift {
+            from { transform: translate(0, 0); }
+            to   { transform: translate(40px, 30px); }
+        }
+
+        /* ── Content ── */
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            max-width: 640px;
+            width: 100%;
+            animation: fadeUp 1s ease both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Logo */
+        .logo-wrap {
+            margin-bottom: 2.5rem;
+            animation: fadeUp 1s 0.1s ease both;
+        }
+
+        .logo-wrap img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px var(--green-glow));
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { filter: drop-shadow(0 0 16px var(--green-glow)); }
+            50%       { filter: drop-shadow(0 0 30px rgba(45,122,58,0.65)); }
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: var(--white-faint);
+            border: 1px solid rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px);
+            color: var(--white-muted);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.45rem 1.1rem;
+            border-radius: 100px;
+            margin-bottom: 1.6rem;
+            animation: fadeUp 1s 0.2s ease both;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: clamp(2.4rem, 7vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.2rem;
+            animation: fadeUp 1s 0.3s ease both;
+        }
+
+        h1 span {
+            background: linear-gradient(120deg, #6ee87a, #3d9e4e, #a3f0aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            color: var(--white-muted);
+            line-height: 1.65;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            animation: fadeUp 1s 0.4s ease both;
+        }
+
+        /* Divider dots */
+        .dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-bottom: 2.5rem;
+            animation: fadeUp 1s 0.45s ease both;
+        }
+
+        .dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--green-primary);
+            animation: blink 1.6s ease-in-out infinite;
+        }
+
+        .dot:nth-child(2) { animation-delay: 0.3s; background: var(--green-light); }
+        .dot:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.3; transform: scale(0.85); }
+            50%       { opacity: 1;   transform: scale(1); }
+        }
+
+        /* Social links */
+        .social-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            animation: fadeUp 1s 0.55s ease both;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.65rem 1.3rem;
+            border-radius: 100px;
+            border: 1px solid rgba(255,255,255,0.18);
+            background: var(--white-faint);
+            backdrop-filter: blur(8px);
+            color: var(--white-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+
+        .social-btn svg {
+            width: 16px; height: 16px;
+            flex-shrink: 0;
+        }
+
+        .social-btn:hover {
+            background: var(--green-primary);
+            border-color: var(--green-primary);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px var(--green-glow);
+        }
+
+        /* Footer note */
+        .footer-note {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 0; right: 0;
+            text-align: center;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 0.04em;
+            z-index: 1;
+            animation: fadeUp 1s 0.7s ease both;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .logo-wrap img { width: 90px; height: 90px; }
+            .social-row { flex-direction: column; }
+            .social-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Animated background -->
+    <div class="bg" aria-hidden="true">
+        <div class="bg-img"></div>
+        <div class="bg-overlay"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <!-- Main content -->
+    <main class="content" role="main">
+
+        <div class="logo-wrap">
+            <img src="logo.png" alt="NAF Vale do Sousa Logo">
+        </div>
+
+        <div class="badge">Núcleo de Árbitros de Futebol do Vale do Sousa</div>
+
+        <h1>Em breve<span>.</span></h1>
+
+        <p class="subtitle">
+            O nosso novo website está a ser preparado.<br>
+            Voltamos brevemente com novidades para toda a família da arbitragem.
+        </p>
+
+        <div class="dots" aria-hidden="true">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="social-row">
+            <a href="https://www.facebook.com/nucleoarbitrosfutebolvaledosousa/?locale=pt_PT"
+               target="_blank" rel="noopener noreferrer"
+               class="social-btn"
+               aria-label="Seguir no Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                Facebook
+            </a>
+            <a href="https://www.instagram.com/nafvaledosousa/"
+               target="_blank" rel="noopener noreferrer"
+               class="social-btn"
+               aria-label="Seguir no Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                Instagram
+            </a>
+            <a href="mailto:nafvalesousa@gmail.com"
+               class="social-btn"
+               aria-label="Enviar email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                Contacto
+            </a>
+        </div>
+
+    </main>
+
+    <p class="footer-note">© 2026 NAF Vale do Sousa — Todos os direitos reservados</p>
+
+</body>
+</html>
